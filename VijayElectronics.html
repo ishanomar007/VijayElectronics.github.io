@@ -1,0 +1,3251 @@
+# Vijay Electronics — Complete Business Website
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vijay Electronics | Hardoi, Uttar Pradesh</title>
+
+<meta name="description"
+content="Vijay Electronics Hardoi - Home appliances, refrigerators, TVs, washing machines, ACs, fans, water purifiers, kitchen appliances, inverters and batteries.">
+
+<style>
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar {
+    background: #111827;
+    color: white;
+    padding: 9px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.top-bar a {
+    color: #fff;
+    margin-left: 18px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.10);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 6%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-icon {
+    width: 48px;
+    height: 48px;
+    background: #e63946;
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.logo h1 {
+    font-size: 22px;
+    color: #111827;
+}
+
+.logo span {
+    color: #e63946;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-weight: bold;
+    color: #333;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e63946;
+}
+
+.menu-button {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 600px;
+    padding: 90px 7%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, rgba(10,20,40,0.95), rgba(10,20,40,0.55)),
+        url("https://images.unsplash.com/photo-1604754742629-3e5728249d73?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 720px;
+}
+
+.hero h2 {
+    font-size: clamp(40px, 6vw, 70px);
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.hero h2 span {
+    color: #ffcc00;
+}
+
+.hero p {
+    font-size: 20px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: #e63946;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #c92534;
+    transform: translateY(-2px);
+}
+
+.btn-light {
+    background: white;
+    color: #111827;
+}
+
+.btn-light:hover {
+    background: #eee;
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 35px 7%;
+    background: white;
+}
+
+.feature {
+    text-align: center;
+    padding: 20px;
+}
+
+.feature-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    margin-bottom: 7px;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+    padding: 75px 7%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #666;
+    font-size: 17px;
+}
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    background: white;
+    padding: 28px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.13);
+}
+
+.category-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.category-card h3 {
+    margin-bottom: 8px;
+}
+
+.category-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.catalog-tools {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 35px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.search-box,
+.category-filter {
+    padding: 14px 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    font-size: 16px;
+}
+
+.search-box {
+    width: min(500px, 100%);
+}
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-7px);
+}
+
+.product-image {
+    height: 210px;
+    background: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-category {
+    display: inline-block;
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.product-info h3 {
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.product-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.product-buttons button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+}
+
+.details-btn {
+    background: #e5e7eb;
+}
+
+.enquire-btn {
+    background: #e63946;
+    color: white;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: white;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-image {
+    min-height: 400px;
+    border-radius: 20px;
+    background:
+        linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),
+        url("https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1000&q=80");
+    background-size: cover;
+    background-position: center;
+}
+
+.about-text h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+.about-list {
+    list-style: none;
+}
+
+.about-list li {
+    margin: 12px 0;
+    font-weight: bold;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    background: #111827;
+    color: white;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contact-card {
+    background: #1f2937;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.contact-card h3 {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.contact-item {
+    margin: 18px 0;
+    line-height: 1.7;
+}
+
+.contact-item strong {
+    display: block;
+    color: #ffcc00;
+}
+
+.contact-item a {
+    color: white;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: none;
+    font-size: 15px;
+}
+
+.contact-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #080d16;
+    color: #aaa;
+    padding: 35px 7%;
+    text-align: center;
+}
+
+footer h2 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    margin: 20px 0;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: #ccc;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-box {
+    background: white;
+    color: #222;
+    max-width: 550px;
+    width: 100%;
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.modal-box h2 {
+    margin-bottom: 15px;
+}
+
+.modal-box p {
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   WHATSAPP FLOAT
+========================= */
+
+.whatsapp {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    z-index: 2000;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 1000px) {
+
+    .features,
+    .category-grid,
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-container,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 700px) {
+
+    .top-bar {
+        display: none;
+    }
+
+    .navbar {
+        padding: 12px 5%;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 25px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .hero {
+        padding: 70px 6%;
+        min-height: 540px;
+    }
+
+    .features,
+    .category-grid,
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 55px 6%;
+    }
+}
+
+</style>
+
+<style id="ogeneral-ac-type-styles">
+.ogeneral-inside-ac{
+    grid-column:1 / -1;
+    width:100%;
+    margin-top:25px;
+}
+.ogeneral-type-group{
+    width:100%;
+    margin:32px 0 42px;
+}
+.ogeneral-type-title{
+    margin-bottom:18px;
+    padding:14px 18px;
+    border-left:4px solid #1f6feb;
+    background:rgba(31,111,235,.06);
+    border-radius:8px;
+}
+.ogeneral-type-title h3{
+    margin:0 0 5px;
+    font-size:20px;
+}
+.ogeneral-type-title p{
+    margin:0;
+    opacity:.75;
+}
+.ogeneral-type-grid{
+    width:100%;
+}
+@media (max-width:700px){
+    .ogeneral-type-title h3{font-size:17px;}
+}
+</style>
+
+</head>
+
+<body>
+
+
+<!-- =========================
+     TOP BAR
+========================= -->
+
+<div class="top-bar">
+
+    <div>
+        📍 Hospital Road, Near Balaji Hospital, Hardoi
+    </div>
+
+    <div>
+        📞
+        <a href="tel:9140650967">9140650967</a>
+        |
+        <a href="tel:9919257245">9919257245</a>
+    </div>
+
+</div>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-icon">⚡</div>
+
+        <div>
+            <h1>Vijay <span>Electronics</span></h1>
+            <small>Hardoi, Uttar Pradesh</small>
+        </div>
+
+    </div>
+
+    <div class="menu-button" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks">
+
+        <li><a href="#home">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+    </ul>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h2>
+            Everything for Your
+            <span>Modern Home</span>
+        </h2>
+
+        <p>
+            Welcome to Vijay Electronics, Hardoi.
+            Explore home appliances, cooling solutions,
+            entertainment products, kitchen appliances,
+            cleaning appliances and power solutions.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#products" class="btn btn-primary">
+                Explore Products
+            </a>
+
+            <a href="#contact" class="btn btn-light">
+                Contact Us
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<section class="features">
+
+    <div class="feature">
+        <div class="feature-icon">🏪</div>
+        <h3>Trusted Store</h3>
+        <p>Serving customers in Hardoi.</p>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">📦</div>
+        <h3>Wide Selection</h3>
+        <p>Multiple home appliance categories.</p>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">🛠️</div>
+        <h3>Product Support</h3>
+        <p>Ask us about products and availability.</p>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">📞</div>
+        <h3>Easy Enquiry</h3>
+        <p>Call or WhatsApp us directly.</p>
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CATEGORIES
+========================= -->
+
+<section class="section" id="categories">
+
+    <div class="section-title">
+
+        <h2>Our Categories</h2>
+
+        <p>
+            Browse our range of electronics and home appliances
+        </p>
+
+    </div>
+
+
+    <div class="category-grid">
+
+        <div class="category-card" onclick="filterCategory('Refrigerator')">
+            <div class="category-icon">🧊</div>
+            <h3>Refrigerators</h3>
+            <p>Single door, double door and large refrigerators</p>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('TV')">
+            <div class="category-icon">📺</div>
+            <h3>Televisions</h3>
+            <p>Smart TVs and LED TVs</p>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Washing Machine')">
+            <div class="category-icon">🧺</div>
+            <h3>Washing Machines</h3>
+            <p>Fully automatic and semi automatic</p>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('AC')">
+            <div class="category-icon">❄️</div>
+            <h3>Air Conditioners</h3>
+            <p>Split and window AC solutions</p>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Ceiling Fan')">
+            <div class="category-icon">🌀</div>
+            <h3>Ceiling Fans</h3>
+            <p>Energy-efficient fans</p>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Water Purifier')">
+            <div class="category-icon">💧</div>
+            <h3>Water Purifiers</h3>
+            <p>RO, UV and water purification solutions</p>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Air Purifier')">
+            <div class="category-icon">🌬️</div>
+            <h3>Air Purifiers</h3>
+            <p>Cleaner indoor air solutions</p>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Kitchen Appliance')">
+            <div class="category-icon">🍳</div>
+            <h3>Kitchen Appliances</h3>
+            <p>Useful appliances for modern kitchens</p>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Hair Appliance')">
+            <div class="category-icon">💇</div>
+            <h3>Hair Appliances</h3>
+            <p>Hair dryers, straighteners and more</p>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Cleaning Appliance')">
+            <div class="category-icon">🧹</div>
+            <h3>Cleaning Appliances</h3>
+            <p>Vacuum cleaners and cleaning products</p>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Water Cooler')">
+            <div class="category-icon">🚰</div>
+            <h3>Water Coolers</h3>
+            <p>Cooling solutions for homes and offices</p>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Fan')">
+            <div class="category-icon">🪭</div>
+            <h3>Fans</h3>
+            <p>Table, pedestal and other fans</p>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Inverter')">
+            <div class="category-icon">🔋</div>
+            <h3>Inverters</h3>
+            <p>Home and office power backup</p>
+        </div>
+
+        <div class="category-card" onclick="filterCategory('Inverter Battery')">
+            <div class="category-icon">🔋</div>
+            <h3>Inverter Batteries</h3>
+            <p>Battery backup solutions</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PRODUCT CATALOGUE
+========================= -->
+
+<section class="section" id="products">
+
+    <div class="section-title">
+
+        <h2>Product Catalogue</h2>
+
+        <p>
+            Browse our major product categories
+        </p>
+
+    </div>
+
+
+    <div class="catalog-tools">
+
+        <input
+            type="text"
+            id="searchInput"
+            class="search-box"
+            placeholder="🔎 Search products..."
+            onkeyup="searchProducts()"
+        >
+
+        <select
+            id="categoryFilter"
+            class="category-filter"
+            onchange="searchProducts()"
+        >
+
+            <option value="All">All Categories</option>
+            <option value="Refrigerator">Refrigerators</option>
+            <option value="TV">TVs</option>
+            <option value="Washing Machine">Washing Machines</option>
+            <option value="AC">ACs</option>
+            <option value="Ceiling Fan">Ceiling Fans</option>
+            <option value="Water Purifier">Water Purifiers</option>
+            <option value="Air Purifier">Air Purifiers</option>
+            <option value="Kitchen Appliance">Kitchen Appliances</option>
+            <option value="Hair Appliance">Hair Appliances</option>
+            <option value="Cleaning Appliance">Cleaning Appliances</option>
+            <option value="Water Cooler">Water Coolers</option>
+            <option value="Fan">Fans</option>
+            <option value="Inverter">Inverters</option>
+            <option value="Inverter Battery">Inverter Batteries</option>
+
+        </select>
+
+    </div>
+
+
+    <div class="product-grid" id="productGrid">
+
+
+        <!-- REFRIGERATORS -->
+
+        <div class="product-card"
+             data-category="Refrigerator"
+             data-name="LG 190L Single Door Refrigerator">
+
+            <div class="product-image">🧊</div>
+
+            <div class="product-info">
+
+                <span class="product-category">Refrigerator</span>
+
+                <h3>LG 190L Refrigerator</h3>
+
+                <p>
+                    Single door refrigerator with direct cooling
+                    and energy-efficient operation.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    'LG 190L Refrigerator',
+                    'Single Door | Direct Cool | Approx. 190 Litres'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('LG 190L Refrigerator')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="product-card"
+             data-category="Refrigerator"
+             data-name="LG 260L Double Door Refrigerator">
+
+            <div class="product-image">🧊</div>
+
+            <div class="product-info">
+
+                <span class="product-category">Refrigerator</span>
+
+                <h3>LG 260L Refrigerator</h3>
+
+                <p>
+                    Double door frost-free refrigerator
+                    for family use.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    'LG 260L Refrigerator',
+                    'Double Door | Frost Free | Approx. 260 Litres'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('LG 260L Refrigerator')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="product-card"
+             data-category="Refrigerator"
+             data-name="LG 300L Double Door Refrigerator">
+
+            <div class="product-image">🧊</div>
+
+            <div class="product-info">
+
+                <span class="product-category">Refrigerator</span>
+
+                <h3>LG 300L Refrigerator</h3>
+
+                <p>
+                    Spacious frost-free refrigerator
+                    with modern features.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    'LG 300L Refrigerator',
+                    'Double Door | Frost Free | Approx. 300 Litres'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('LG 300L Refrigerator')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="product-card"
+             data-category="Refrigerator"
+             data-name="LG Side by Side Refrigerator">
+
+            <div class="product-image">🧊</div>
+
+            <div class="product-info">
+
+                <span class="product-category">Refrigerator</span>
+
+                <h3>LG Side-by-Side</h3>
+
+                <p>
+                    Large-capacity side-by-side refrigerator
+                    for premium home kitchens.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    'LG Side-by-Side Refrigerator',
+                    'Side-by-Side | Frost Free | Large Capacity'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('LG Side-by-Side Refrigerator')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- TV -->
+
+        <div class="product-card"
+             data-category="TV"
+             data-name="LG Smart LED TV">
+
+            <div class="product-image">📺</div>
+
+            <div class="product-info">
+
+                <span class="product-category">TV</span>
+
+                <h3>Smart LED TV</h3>
+
+                <p>
+                    Smart television with streaming,
+                    HDMI and USB connectivity.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    'Smart LED TV',
+                    'Smart TV | LED Display | HDMI | USB'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('Smart LED TV')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="product-card"
+             data-category="TV"
+             data-name="4K UHD Smart TV">
+
+            <div class="product-image">📺</div>
+
+            <div class="product-info">
+
+                <span class="product-category">TV</span>
+
+                <h3>4K UHD Smart TV</h3>
+
+                <p>
+                    Ultra HD smart television with
+                    high-resolution picture quality.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    '4K UHD Smart TV',
+                    '4K UHD | Smart TV | HDMI | USB'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('4K UHD Smart TV')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- WASHING MACHINE -->
+
+        <div class="product-card"
+             data-category="Washing Machine"
+             data-name="Fully Automatic Washing Machine">
+
+            <div class="product-image">🧺</div>
+
+            <div class="product-info">
+
+                <span class="product-category">Washing Machine</span>
+
+                <h3>Fully Automatic Washing Machine</h3>
+
+                <p>
+                    Automatic washing machine with
+                    multiple wash programs.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    'Fully Automatic Washing Machine',
+                    'Fully Automatic | Multiple Wash Programs'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('Fully Automatic Washing Machine')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="product-card"
+             data-category="Washing Machine"
+             data-name="Semi Automatic Washing Machine">
+
+            <div class="product-image">🧺</div>
+
+            <div class="product-info">
+
+                <span class="product-category">Washing Machine</span>
+
+                <h3>Semi Automatic Washing Machine</h3>
+
+                <p>
+                    Practical washing solution with
+                    wash and spin functions.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    'Semi Automatic Washing Machine',
+                    'Semi Automatic | Wash + Spin'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('Semi Automatic Washing Machine')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- AC -->
+
+        <div class="product-card"
+             data-category="AC"
+             data-name="Split Air Conditioner">
+
+            <div class="product-image">❄️</div>
+
+            <div class="product-info">
+
+                <span class="product-category">AC</span>
+
+                <h3>Split Air Conditioner</h3>
+
+                <p>
+                    Energy-efficient cooling solution
+                    for bedrooms and living rooms.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    'Split Air Conditioner',
+                    'Split AC | Inverter Options Available'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('Split Air Conditioner')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="product-card"
+             data-category="AC"
+             data-name="Window Air Conditioner">
+
+            <div class="product-image">❄️</div>
+
+            <div class="product-info">
+
+                <span class="product-category">AC</span>
+
+                <h3>Window Air Conditioner</h3>
+
+                <p>
+                    Compact cooling solution for
+                    suitable rooms and installations.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    'Window Air Conditioner',
+                    'Window AC | Cooling Solution'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('Window Air Conditioner')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+<!-- OGENERAL MODELS: INSIDE THE MAIN AC CATEGORY -->
+<div id="ogeneralModels" class="ogeneral-inside-ac">
+    
+        <div class="ogeneral-type-group" data-category="AC">
+            <div class="ogeneral-type-title">
+                <h3>HI WALL MOUNT SPLIT AIR CONDITIONERS — FIXED SPEED</h3>
+                <p>Fixed Speed / Tropical / Extreme Cooling</p>
+            </div>
+            <div class="product-grid ogeneral-type-grid">
+                
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="AMGB09BBWA-B" data-ac-type="Fixed Speed / Tropical / Extreme Cooling">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>AMGB09BBWA-B</h3>
+                <p>Fixed Speed / Tropical / Extreme Cooling</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('AMGB09BBWA-B', 'OGeneral — Fixed Speed / Tropical / Extreme Cooling')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral AMGB09BBWA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="AFGB14BBAA-B" data-ac-type="Fixed Speed / Tropical / Extreme Cooling">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>AFGB14BBAA-B</h3>
+                <p>Fixed Speed / Tropical / Extreme Cooling</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('AFGB14BBAA-B', 'OGeneral — Fixed Speed / Tropical / Extreme Cooling')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral AFGB14BBAA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="AXGB18BBAA-B" data-ac-type="Fixed Speed / Tropical / Extreme Cooling">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>AXGB18BBAA-B</h3>
+                <p>Fixed Speed / Tropical / Extreme Cooling</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('AXGB18BBAA-B', 'OGeneral — Fixed Speed / Tropical / Extreme Cooling')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral AXGB18BBAA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="AXGB22BBAA-B" data-ac-type="Fixed Speed / Tropical / Extreme Cooling">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>AXGB22BBAA-B</h3>
+                <p>Fixed Speed / Tropical / Extreme Cooling</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('AXGB22BBAA-B', 'OGeneral — Fixed Speed / Tropical / Extreme Cooling')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral AXGB22BBAA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="AFGB14CHWA-B" data-ac-type="Fixed Speed / Tropical / Extreme Cooling">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>AFGB14CHWA-B</h3>
+                <p>Fixed Speed / Tropical / Extreme Cooling</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('AFGB14CHWA-B', 'OGeneral — Fixed Speed / Tropical / Extreme Cooling')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral AFGB14CHWA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="AXGB18CHAA-B" data-ac-type="Fixed Speed / Tropical / Extreme Cooling">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>AXGB18CHAA-B</h3>
+                <p>Fixed Speed / Tropical / Extreme Cooling</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('AXGB18CHAA-B', 'OGeneral — Fixed Speed / Tropical / Extreme Cooling')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral AXGB18CHAA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="AXGB22CHAA-B" data-ac-type="Fixed Speed / Tropical / Extreme Cooling">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>AXGB22CHAA-B</h3>
+                <p>Fixed Speed / Tropical / Extreme Cooling</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('AXGB22CHAA-B', 'OGeneral — Fixed Speed / Tropical / Extreme Cooling')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral AXGB22CHAA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+            </div>
+        </div>
+
+        <div class="ogeneral-type-group" data-category="AC">
+            <div class="ogeneral-type-title">
+                <h3>HI WALL MOUNT SPLIT AIR CONDITIONERS — INVERTER TYPE</h3>
+                <p>Inverter / Tropical / Efficient / Hot & Cold</p>
+            </div>
+            <div class="product-grid ogeneral-type-grid">
+                
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGA14BMAA-B" data-ac-type="Inverter / Tropical / Efficient / Hot & Cold">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGA14BMAA-B</h3>
+                <p>Inverter / Tropical / Efficient / Hot & Cold</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGA14BMAA-B', 'OGeneral — Inverter / Tropical / Efficient / Hot & Cold')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGA14BMAA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGA18BMAA-B" data-ac-type="Inverter / Tropical / Efficient / Hot & Cold">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGA18BMAA-B</h3>
+                <p>Inverter / Tropical / Efficient / Hot & Cold</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGA18BMAA-B', 'OGeneral — Inverter / Tropical / Efficient / Hot & Cold')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGA18BMAA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGA24BMAA-B" data-ac-type="Inverter / Tropical / Efficient / Hot & Cold">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGA24BMAA-B</h3>
+                <p>Inverter / Tropical / Efficient / Hot & Cold</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGA24BMAA-B', 'OGeneral — Inverter / Tropical / Efficient / Hot & Cold')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGA24BMAA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGA18BUTA-B" data-ac-type="Inverter / Tropical / Efficient / Hot & Cold">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGA18BUTA-B</h3>
+                <p>Inverter / Tropical / Efficient / Hot & Cold</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGA18BUTA-B', 'OGeneral — Inverter / Tropical / Efficient / Hot & Cold')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGA18BUTA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGA24BUTA-B" data-ac-type="Inverter / Tropical / Efficient / Hot & Cold">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGA24BUTA-B</h3>
+                <p>Inverter / Tropical / Efficient / Hot & Cold</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGA24BUTA-B', 'OGeneral — Inverter / Tropical / Efficient / Hot & Cold')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGA24BUTA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGA14NMWA-B" data-ac-type="Inverter / Tropical / Efficient / Hot & Cold">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGA14NMWA-B</h3>
+                <p>Inverter / Tropical / Efficient / Hot & Cold</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGA14NMWA-B', 'OGeneral — Inverter / Tropical / Efficient / Hot & Cold')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGA14NMWA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGA18NMWA-B" data-ac-type="Inverter / Tropical / Efficient / Hot & Cold">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGA18NMWA-B</h3>
+                <p>Inverter / Tropical / Efficient / Hot & Cold</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGA18NMWA-B', 'OGeneral — Inverter / Tropical / Efficient / Hot & Cold')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGA18NMWA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGA24NMWA-B" data-ac-type="Inverter / Tropical / Efficient / Hot & Cold">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGA24NMWA-B</h3>
+                <p>Inverter / Tropical / Efficient / Hot & Cold</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGA24NMWA-B', 'OGeneral — Inverter / Tropical / Efficient / Hot & Cold')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGA24NMWA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG18CEAC-B" data-ac-type="Inverter / Tropical / Efficient / Hot & Cold">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG18CEAC-B</h3>
+                <p>Inverter / Tropical / Efficient / Hot & Cold</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG18CEAC-B', 'OGeneral — Inverter / Tropical / Efficient / Hot & Cold')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG18CEAC-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+            </div>
+        </div>
+
+        <div class="ogeneral-type-group" data-category="AC">
+            <div class="ogeneral-type-title">
+                <h3>CASSETTE AIR CONDITIONERS</h3>
+                <p>Cassette AC</p>
+            </div>
+            <div class="product-grid ogeneral-type-grid">
+                
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG24CEAC-B" data-ac-type="Cassette AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG24CEAC-B</h3>
+                <p>Cassette AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG24CEAC-B', 'OGeneral — Cassette AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG24CEAC-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG30CEAC-B" data-ac-type="Cassette AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG30CEAC-B</h3>
+                <p>Cassette AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG30CEAC-B', 'OGeneral — Cassette AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG30CEAC-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG36CEAC-B" data-ac-type="Cassette AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG36CEAC-B</h3>
+                <p>Cassette AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG36CEAC-B', 'OGeneral — Cassette AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG36CEAC-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG12CGAB-B" data-ac-type="Cassette AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG12CGAB-B</h3>
+                <p>Cassette AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG12CGAB-B', 'OGeneral — Cassette AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG12CGAB-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG18CGAB-B" data-ac-type="Cassette AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG18CGAB-B</h3>
+                <p>Cassette AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG18CGAB-B', 'OGeneral — Cassette AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG18CGAB-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG24CGAA-B" data-ac-type="Cassette AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG24CGAA-B</h3>
+                <p>Cassette AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG24CGAA-B', 'OGeneral — Cassette AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG24CGAA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG18CETB-B" data-ac-type="Cassette AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG18CETB-B</h3>
+                <p>Cassette AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG18CETB-B', 'OGeneral — Cassette AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG18CETB-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+            </div>
+        </div>
+
+        <div class="ogeneral-type-group" data-category="AC">
+            <div class="ogeneral-type-title">
+                <h3>HI WALL MOUNT SPLIT AIR CONDITIONERS — FIXED SPEED / EXTREME & TROPICAL</h3>
+                <p>Fixed Speed Split AC</p>
+            </div>
+            <div class="product-grid ogeneral-type-grid">
+                
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG12CPWA-B" data-ac-type="Fixed Speed Split AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG12CPWA-B</h3>
+                <p>Fixed Speed Split AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG12CPWA-B', 'OGeneral — Fixed Speed Split AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG12CPWA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG18CPWA-B" data-ac-type="Fixed Speed Split AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG18CPWA-B</h3>
+                <p>Fixed Speed Split AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG18CPWA-B', 'OGeneral — Fixed Speed Split AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG18CPWA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG24CPWA-B" data-ac-type="Fixed Speed Split AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG24CPWA-B</h3>
+                <p>Fixed Speed Split AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG24CPWA-B', 'OGeneral — Fixed Speed Split AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG24CPWA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG18CNWA-B" data-ac-type="Fixed Speed Split AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG18CNWA-B</h3>
+                <p>Fixed Speed Split AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG18CNWA-B', 'OGeneral — Fixed Speed Split AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG18CNWA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG22CNWA-B" data-ac-type="Fixed Speed Split AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG22CNWA-B</h3>
+                <p>Fixed Speed Split AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG22CNWA-B', 'OGeneral — Fixed Speed Split AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG22CNWA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG18KJTA-B" data-ac-type="Fixed Speed Split AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG18KJTA-B</h3>
+                <p>Fixed Speed Split AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG18KJTA-B', 'OGeneral — Fixed Speed Split AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG18KJTA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG24KJTA-B" data-ac-type="Fixed Speed Split AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG24KJTA-B</h3>
+                <p>Fixed Speed Split AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG24KJTA-B', 'OGeneral — Fixed Speed Split AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG24KJTA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG30KJTA-B" data-ac-type="Fixed Speed Split AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG30KJTA-B</h3>
+                <p>Fixed Speed Split AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG30KJTA-B', 'OGeneral — Fixed Speed Split AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG30KJTA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+            </div>
+        </div>
+
+        <div class="ogeneral-type-group" data-category="AC">
+            <div class="ogeneral-type-title">
+                <h3>HI WALL MOUNT SPLIT AIR CONDITIONERS — INVERTER / EFFICIENT & TROPICAL</h3>
+                <p>Inverter Split AC</p>
+            </div>
+            <div class="product-grid ogeneral-type-grid">
+                
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG12CGWA-B" data-ac-type="Inverter Split AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG12CGWA-B</h3>
+                <p>Inverter Split AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG12CGWA-B', 'OGeneral — Inverter Split AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG12CGWA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG18CGWA-B" data-ac-type="Inverter Split AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG18CGWA-B</h3>
+                <p>Inverter Split AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG18CGWA-B', 'OGeneral — Inverter Split AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG18CGWA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG24CGWA-B" data-ac-type="Inverter Split AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG24CGWA-B</h3>
+                <p>Inverter Split AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG24CGWA-B', 'OGeneral — Inverter Split AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG24CGWA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG12CKWA-B" data-ac-type="Inverter Split AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG12CKWA-B</h3>
+                <p>Inverter Split AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG12CKWA-B', 'OGeneral — Inverter Split AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG12CKWA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG18CKWA-B" data-ac-type="Inverter Split AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG18CKWA-B</h3>
+                <p>Inverter Split AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG18CKWA-B', 'OGeneral — Inverter Split AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG18CKWA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="ASGG24CKWA-B" data-ac-type="Inverter Split AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>ASGG24CKWA-B</h3>
+                <p>Inverter Split AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('ASGG24CKWA-B', 'OGeneral — Inverter Split AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral ASGG24CKWA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+            </div>
+        </div>
+
+        <div class="ogeneral-type-group" data-category="AC">
+            <div class="ogeneral-type-title">
+                <h3>AIR CONDITIONERS — HIGH CAPACITY</h3>
+                <p>High Capacity AC</p>
+            </div>
+            <div class="product-grid ogeneral-type-grid">
+                
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="AUGA25BRTA-B" data-ac-type="High Capacity AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>AUGA25BRTA-B</h3>
+                <p>High Capacity AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('AUGA25BRTA-B', 'OGeneral — High Capacity AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral AUGA25BRTA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="AUGA36BRTA-B" data-ac-type="High Capacity AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>AUGA36BRTA-B</h3>
+                <p>High Capacity AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('AUGA36BRTA-B', 'OGeneral — High Capacity AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral AUGA36BRTA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="AUGG25CRTA-B" data-ac-type="High Capacity AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>AUGG25CRTA-B</h3>
+                <p>High Capacity AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('AUGG25CRTA-B', 'OGeneral — High Capacity AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral AUGG25CRTA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="AUGG36CRTA-B" data-ac-type="High Capacity AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>AUGG36CRTA-B</h3>
+                <p>High Capacity AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('AUGG36CRTA-B', 'OGeneral — High Capacity AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral AUGG36CRTA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card" data-category="AC" data-brand="OGeneral"
+             data-name="AUGG48CRAA-B" data-ac-type="High Capacity AC">
+            <div class="product-image">❄️</div>
+            <div class="product-info">
+                <span class="product-category">OGeneral AC</span>
+                <h3>AUGG48CRAA-B</h3>
+                <p>High Capacity AC</p>
+                <div class="product-buttons">
+                    <button class="details-btn"
+                        onclick="showDetails('AUGG48CRAA-B', 'OGeneral — High Capacity AC')">
+                        Details
+                    </button>
+                    <button class="enquire-btn"
+                        onclick="enquire('OGeneral AUGG48CRAA-B')">
+                        Enquire
+                    </button>
+                </div>
+            </div>
+        </div>
+
+            </div>
+        </div>
+
+</div>
+
+<!-- CEILING FAN -->
+
+        <div class="product-card"
+             data-category="Ceiling Fan"
+             data-name="Energy Efficient Ceiling Fan">
+
+            <div class="product-image">🌀</div>
+
+            <div class="product-info">
+
+                <span class="product-category">Ceiling Fan</span>
+
+                <h3>Ceiling Fan</h3>
+
+                <p>
+                    Energy-efficient ceiling fan for
+                    everyday home use.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    'Ceiling Fan',
+                    'Ceiling Fan | Energy Efficient | Multiple Designs'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('Ceiling Fan')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- WATER PURIFIER -->
+
+        <div class="product-card"
+             data-category="Water Purifier"
+             data-name="RO Water Purifier">
+
+            <div class="product-image">💧</div>
+
+            <div class="product-info">
+
+                <span class="product-category">Water Purifier</span>
+
+                <h3>RO Water Purifier</h3>
+
+                <p>
+                    Home water purification system
+                    with RO technology.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    'RO Water Purifier',
+                    'RO Water Purifier | Home Use'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('RO Water Purifier')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- AIR PURIFIER -->
+
+        <div class="product-card"
+             data-category="Air Purifier"
+             data-name="Home Air Purifier">
+
+            <div class="product-image">🌬️</div>
+
+            <div class="product-info">
+
+                <span class="product-category">Air Purifier</span>
+
+                <h3>Home Air Purifier</h3>
+
+                <p>
+                    Indoor air purification solution
+                    for homes and rooms.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    'Home Air Purifier',
+                    'Air Purifier | Indoor Use'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('Home Air Purifier')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- KITCHEN -->
+
+        <div class="product-card"
+             data-category="Kitchen Appliance"
+             data-name="Mixer Grinder">
+
+            <div class="product-image">🍳</div>
+
+            <div class="product-info">
+
+                <span class="product-category">Kitchen Appliance</span>
+
+                <h3>Mixer Grinder</h3>
+
+                <p>
+                    Kitchen mixer grinder for everyday
+                    grinding and blending.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    'Mixer Grinder',
+                    'Kitchen Appliance | Mixer Grinder'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('Mixer Grinder')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="product-card"
+             data-category="Kitchen Appliance"
+             data-name="Electric Kettle">
+
+            <div class="product-image">☕</div>
+
+            <div class="product-info">
+
+                <span class="product-category">Kitchen Appliance</span>
+
+                <h3>Electric Kettle</h3>
+
+                <p>
+                    Convenient appliance for
+                    heating water and beverages.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    'Electric Kettle',
+                    'Kitchen Appliance | Electric Kettle'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('Electric Kettle')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- HAIR APPLIANCE -->
+
+        <div class="product-card"
+             data-category="Hair Appliance"
+             data-name="Hair Dryer">
+
+            <div class="product-image">💇</div>
+
+            <div class="product-info">
+
+                <span class="product-category">Hair Appliance</span>
+
+                <h3>Hair Dryer</h3>
+
+                <p>
+                    Hair drying appliance with
+                    convenient everyday operation.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    'Hair Dryer',
+                    'Hair Appliance | Hair Dryer'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('Hair Dryer')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- CLEANING -->
+
+        <div class="product-card"
+             data-category="Cleaning Appliance"
+             data-name="Vacuum Cleaner">
+
+            <div class="product-image">🧹</div>
+
+            <div class="product-info">
+
+                <span class="product-category">Cleaning Appliance</span>
+
+                <h3>Vacuum Cleaner</h3>
+
+                <p>
+                    Home cleaning appliance for
+                    floors and surfaces.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    'Vacuum Cleaner',
+                    'Cleaning Appliance | Vacuum Cleaner'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('Vacuum Cleaner')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- WATER COOLER -->
+
+        <div class="product-card"
+             data-category="Water Cooler"
+             data-name="Water Cooler">
+
+            <div class="product-image">🚰</div>
+
+            <div class="product-info">
+
+                <span class="product-category">Water Cooler</span>
+
+                <h3>Water Cooler</h3>
+
+                <p>
+                    Cooling and dispensing solution
+                    for homes, offices and shops.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    'Water Cooler',
+                    'Water Cooler | Home and Office Use'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('Water Cooler')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- FANS -->
+
+        <div class="product-card"
+             data-category="Fan"
+             data-name="Pedestal Fan">
+
+            <div class="product-image">🪭</div>
+
+            <div class="product-info">
+
+                <span class="product-category">Fan</span>
+
+                <h3>Pedestal Fan</h3>
+
+                <p>
+                    Adjustable fan suitable for
+                    different room environments.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    'Pedestal Fan',
+                    'Pedestal Fan | Adjustable Height'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('Pedestal Fan')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="product-card"
+             data-category="Fan"
+             data-name="Table Fan">
+
+            <div class="product-image">🌀</div>
+
+            <div class="product-info">
+
+                <span class="product-category">Fan</span>
+
+                <h3>Table Fan</h3>
+
+                <p>
+                    Compact fan for desks, tables
+                    and smaller spaces.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    'Table Fan',
+                    'Table Fan | Compact Design'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('Table Fan')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- INVERTER -->
+
+        <div class="product-card"
+             data-category="Inverter"
+             data-name="Home Inverter">
+
+            <div class="product-image">🔋</div>
+
+            <div class="product-info">
+
+                <span class="product-category">Inverter</span>
+
+                <h3>Home Inverter</h3>
+
+                <p>
+                    Power backup solution for
+                    homes, offices and shops.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    'Home Inverter',
+                    'Home Inverter | Power Backup'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('Home Inverter')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- BATTERY -->
+
+        <div class="product-card"
+             data-category="Inverter Battery"
+             data-name="Inverter Battery">
+
+            <div class="product-image">🔋</div>
+
+            <div class="product-info">
+
+                <span class="product-category">Inverter Battery</span>
+
+                <h3>Inverter Battery</h3>
+
+                <p>
+                    Battery options for home
+                    power backup systems.
+                </p>
+
+                <div class="product-buttons">
+
+                    <button class="details-btn"
+                    onclick="showDetails(
+                    'Inverter Battery',
+                    'Inverter Battery | Home Power Backup'
+                    )">
+                        Details
+                    </button>
+
+                    <button class="enquire-btn"
+                    onclick="enquire('Inverter Battery')">
+                        Enquire
+                    </button>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="section about" id="about">
+
+    <div class="about-container">
+
+        <div class="about-image"></div>
+
+        <div class="about-text">
+
+            <h2>About Vijay Electronics</h2>
+
+            <p>
+                Vijay Electronics is an electronics and home-appliance
+                business located on Hospital Road near Balaji Hospital
+                in Hardoi, Uttar Pradesh.
+            </p>
+
+            <p>
+                Our catalogue covers major home appliance categories,
+                including refrigeration, televisions, washing machines,
+                air conditioners, fans, water purification, kitchen
+                appliances and power-backup products.
+            </p>
+
+            <ul class="about-list">
+
+                <li>✓ Wide range of home appliances</li>
+                <li>✓ Multiple product categories</li>
+                <li>✓ Product enquiry by phone and WhatsApp</li>
+                <li>✓ Convenient Hardoi location</li>
+                <li>✓ Customer-focused service</li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="section contact-section" id="contact">
+
+    <div class="section-title">
+
+        <h2>Contact Vijay Electronics</h2>
+
+        <p style="color:#ccc;">
+            Call us, email us or send a product enquiry.
+        </p>
+
+    </div>
+
+
+    <div class="contact-grid">
+
+
+        <div class="contact-card">
+
+            <h3>Visit or Contact Us</h3>
+
+            <div class="contact-item">
+
+                <strong>📍 Address</strong>
+
+                Vijay Electronics,
+                Hospital Road,
+                Near Balaji Hospital,
+                Civil Lines, Hardoi,
+                Uttar Pradesh, India - 241001
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>📞 Phone 1</strong>
+
+                <a href="tel:9140650967">
+                    9140650967
+                </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>📞 Phone 2</strong>
+
+                <a href="tel:9919257245">
+                    9919257245
+                </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <strong>✉️ Email</strong>
+
+                <a href="mailto:harshitgupta.hg46@gmail.com">
+                    harshitgupta.hg46@gmail.com
+                </a>
+
+                <br>
+
+                <a href="mailto:ram.vijayhardoi@gmail.com">
+                    ram.vijayhardoi@gmail.com
+                </a>
+
+            </div>
+
+
+            <br>
+
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=Vijay+Electronics+Hospital+Road+Hardoi+Uttar+Pradesh"
+                target="_blank"
+                class="btn btn-primary">
+
+                📍 Open Location
+
+            </a>
+
+        </div>
+
+
+        <div class="contact-card">
+
+            <h3>Send Product Enquiry</h3>
+
+            <form class="contact-form" onsubmit="sendEnquiry(event)">
+
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    placeholder="Your Phone Number"
+                    required
+                >
+
+                <select id="customerProduct">
+
+                    <option>Refrigerator</option>
+                    <option>TV</option>
+                    <option>Washing Machine</option>
+                    <option>AC</option>
+                    <option>Ceiling Fan</option>
+                    <option>Water Purifier</option>
+                    <option>Air Purifier</option>
+                    <option>Kitchen Appliance</option>
+                    <option>Hair Appliance</option>
+                    <option>Cleaning Appliance</option>
+                    <option>Water Cooler</option>
+                    <option>Fan</option>
+                    <option>Inverter</option>
+                    <option>Inverter Battery</option>
+
+                </select>
+
+                <textarea
+                    id="customerMessage"
+                    placeholder="Write your enquiry..."
+                    required></textarea>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+
+                    Send Enquiry on WhatsApp
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <h2>Vijay Electronics</h2>
+
+    <p>
+        Your Electronics & Home Appliance Store in Hardoi
+    </p>
+
+    <div class="footer-links">
+
+        <a href="#home">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+
+    </div>
+
+    <p>
+        © <span id="year"></span> Vijay Electronics.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- =========================
+     WHATSAPP BUTTON
+========================= -->
+
+<a
+    class="whatsapp"
+    href="https://wa.me/919140650967"
+    target="_blank"
+    title="Chat on WhatsApp">
+
+    💬
+
+</a>
+
+
+<!-- =========================
+     PRODUCT MODAL
+========================= -->
+
+<div class="modal" id="productModal">
+
+    <div class="modal-box">
+
+        <span class="close" onclick="closeModal()">×</span>
+
+        <h2 id="modalTitle">
+            Product
+        </h2>
+
+        <p id="modalDescription">
+            Product details
+        </p>
+
+        <button
+            class="btn btn-primary"
+            id="modalEnquire">
+
+            Enquire Now
+
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+function toggleMenu() {
+
+    document
+        .getElementById("navLinks")
+        .classList.toggle("active");
+
+}
+
+
+/* =========================
+   SEARCH PRODUCTS
+========================= */
+
+function searchProducts() {
+
+    const search =
+        document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+    const category =
+        document
+        .getElementById("categoryFilter")
+        .value;
+
+    const products =
+        document.querySelectorAll(".product-card");
+
+    products.forEach(function(product) {
+
+        const name =
+            product
+            .getAttribute("data-name")
+            .toLowerCase();
+
+        const productCategory =
+            product
+            .getAttribute("data-category");
+
+        const matchesSearch =
+            name.includes(search);
+
+        const matchesCategory =
+            category === "All" ||
+            productCategory === category;
+
+        if (matchesSearch && matchesCategory) {
+
+            product.style.display = "block";
+
+        } else {
+
+            product.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+/* =========================
+   CATEGORY BUTTON
+========================= */
+
+function filterCategory(category) {
+
+    document
+        .getElementById("products")
+        .scrollIntoView();
+
+    document
+        .getElementById("categoryFilter")
+        .value = category;
+
+    searchProducts();
+
+}
+
+
+/* =========================
+   PRODUCT DETAILS
+========================= */
+
+function showDetails(name, description) {
+
+    document
+        .getElementById("modalTitle")
+        .textContent = name;
+
+    document
+        .getElementById("modalDescription")
+        .textContent = description;
+
+    document
+        .getElementById("productModal")
+        .style.display = "flex";
+
+    document
+        .getElementById("modalEnquire")
+        .onclick = function() {
+
+            enquire(name);
+
+        };
+
+}
+
+
+/* =========================
+   CLOSE MODAL
+========================= */
+
+function closeModal() {
+
+    document
+        .getElementById("productModal")
+        .style.display = "none";
+
+}
+
+
+window.onclick = function(event) {
+
+    const modal =
+        document.getElementById("productModal");
+
+    if (event.target === modal) {
+
+        closeModal();
+
+    }
+
+};
+
+
+/* =========================
+   WHATSAPP PRODUCT ENQUIRY
+========================= */
+
+function enquire(productName) {
+
+    const phone =
+        "919140650967";
+
+    const message =
+        "Hello Vijay Electronics, I am interested in: "
+        + productName
+        + ". Please tell me the price and availability.";
+
+    const url =
+        "https://wa.me/"
+        + phone
+        + "?text="
+        + encodeURIComponent(message);
+
+    window.open(url, "_blank");
+
+}
+
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+function sendEnquiry(event) {
+
+    event.preventDefault();
+
+    const name =
+        document
+        .getElementById("customerName")
+        .value;
+
+    const phone =
+        document
+        .getElementById("customerPhone")
+        .value;
+
+    const product =
+        document
+        .getElementById("customerProduct")
+        .value;
+
+    const message =
+        document
+        .getElementById("customerMessage")
+        .value;
+
+    const whatsappMessage =
+        "Hello Vijay Electronics!"
+        + "\n\n"
+        + "Name: " + name
+        + "\nPhone: " + phone
+        + "\nProduct: " + product
+        + "\nEnquiry: " + message;
+
+    const url =
+        "https://wa.me/919140650967?text="
+        + encodeURIComponent(whatsappMessage);
+
+    window.open(url, "_blank");
+
+}
+
+
+/* =========================
+   YEAR
+========================= */
+
+document
+    .getElementById("year")
+    .textContent = new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
